@@ -96,7 +96,7 @@ def gene_filter_modifying_dataset(X):
 	samples, genes = X.shape
 
 	gene_name_list = X.columns.values
-	np_X = X.as_matrix()
+	np_X = X.to_numpy()
 	gene_snps_sum = np_X.sum(axis = 0)
 
 	gene_snp_dict = dict()
