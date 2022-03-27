@@ -31,6 +31,7 @@ def similarity_measure_form_cluster(X, gene_name_list):
 	gene_cluster_dict = dict()
 	cluster_index = 0
 
+	# THIS IS HOW TO COMPUTE COSINE SIMILARIRY!!!
 	sim_matrix = pairwise.cosine_similarity(X.T)
 
 	x, y = sim_matrix.shape
@@ -108,7 +109,7 @@ def gene_filter_modifying_dataset(X):
 	# setting threshold to cutoff genes without minimum number of snps across samples (1% of the samples has snps)
 	snp_count_threshold = int((samples * 1)/ 100)
 
-	# write the gene snp frequency
+	# write the gene snp frequency (FOR ALL SAMPLES!!!)
 	fout = open('gene_snp_frequency_down.txt', 'w')
 
 	qualified_gene_list = list()

@@ -51,7 +51,7 @@ def main():
 
 		sample_drop_list = list()
 		for i in range(len(gene_snps_sum)):
-			if(gene_snps_sum[i] < 5):
+			if(gene_snps_sum[i] < 5): ## This is 1% in the paper!!!!
 				sample_drop_list.append(i)
 		X.drop(sample_drop_list, axis = 0, inplace = True)
 

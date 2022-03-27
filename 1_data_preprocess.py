@@ -59,8 +59,13 @@ def read_sample_files(path, gene_index_dict):
     # other samples will be vstack upon this on
 
     first_file_name = file_name_list[0]
-    all_sample_cancer_snp_data = np.zeros(len(gene_index_dict),
-            dtype=np.int)
+    
+    #
+    # The missing file!!!! "Per Gene SNP Count"!
+    #
+
+    all_sample_cancer_snp_data = np.zeros(len(gene_index_dict), dtype=np.int)
+
     with open(first_file_name, 'r') as f:
         title_line = f.readline()
         title_cols = title_line.split('\t')
