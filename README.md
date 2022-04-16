@@ -1,3 +1,12 @@
+
+    python3 3_gene_clustering.py all_data.txt
+    python3 create_per_gene_snp_count.py all_data.txt
+    python3 4_gene_filtering.py all_data.txt
+    python3 5_pair_wise_mi.py all_data.txt selected_genes.txt
+
+
+
+
 mClass - Multiple cancer type classifier with somatic point mutation data
 
 mClass is a feature (gene) selection method for multiple cancer type classification using only somatic point mutation data. For this experiment, we have collected the dataset from http://gdac.broadinstitute.org/runs/stddata__2016_01_28/data/
